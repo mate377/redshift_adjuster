@@ -1,0 +1,4 @@
+---
+redshift_base_value: 6500
+redshift_increment: 500
+...
