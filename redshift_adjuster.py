@@ -4,14 +4,19 @@ import yaml
 import subprocess
 import argparse
 
+name_project="redshift_adjuster"
+
 parser = argparse.ArgumentParser(description='Calls redshift to change redness \
 of the screen, keeping track of the value')
 parser.add_argument('action', type=str, choices=['increase','decrease','restore','print'],
                     help='change the redshift by the standard amount')
 args = parser.parse_args()
 
-stream_conf=open("config.yaml","r")
-stream_current=open("current.yaml","r+")
+config_folder="/etc/"+name_project+"/"
+current_folder="/usr/share/"+name_project+"/"
+
+stream_conf=open(config_folder+"config.yaml","r")
+stream_current=open(current_folder+"current.yaml","r+")
 
 config=yaml.load(stream_conf, Loader=yaml.FullLoader)
 current=yaml.load(stream_current, Loader=yaml.FullLoader)

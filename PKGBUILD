@@ -1,7 +1,7 @@
 # Maintainer: Matteo Finazzer <matteo.finazzer AT gmail DOT com>
 
 pkgname=redshift_adjuster
-pkgver=0.2
+pkgver=0.3
 pkgrel=1
 pkgdesc="Wrapper CLI for redshift which stores configs and Temperature value"
 arch=('any')
