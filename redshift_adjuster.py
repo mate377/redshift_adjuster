@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import yaml
 import subprocess
 import argparse
@@ -27,18 +29,3 @@ stream_current.seek(0)
 stream_current.truncate()
 yaml.dump(current,stream=stream_current)
 print(current['redshift_value'])
-
-'''
-#print(os.listdir())
-stream_conf=open("config.yaml","r")
-stream_current=open("current.yaml","r+")
-#stream_exp=open("fff.yaml","w")
-
-config=yaml.load(stream_conf, Loader=yaml.FullLoader)
-current=yaml.load(stream_current, Loader=yaml.FullLoader)
-
-print(current['redshift_value'])
-
-
-subprocess.run(['redshift', '-PO', str(current['redshift_value'])])
-'''
